@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <title>CRUD</title>
+</head>
+<body>
+    <div class="container">
+		<h1 class="text-center my-4">Crud Datos</h1>
+		<table class="table" id="Table">
+			<thead>
+				<tr>
+					<th>id</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Edad</th>
+                    <th>Telefono</th>
+                    <th>pais</th>
+					<th>Acciones</th>
+				</tr>
+			</thead>
+			<tbody class="CuerpoUsuario" id="MuerteLetal">
+				<tr>
+					<td>1</td>
+                    <td>Tomas</td>
+                    <td>Aguilar</td>
+                    <td>20</td>
+                    <td>4217016</td>
+                    <td>Colombia</td>
+					<td>
+						<button type="button" class="btn btn-primary" id="btnEditar">Editar</button>
+						<button type="button" class="btn btn-danger">Eliminar</button>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+		<button type="button" id="abrirAgregarUsuario" class="btn btn-success">Nuevo Usuario</button>
+
+		<dialog id="ventanaAgregarUsuario">
+			<form>
+				<div class="mb-3">
+					<label for="nombre" class="form-label">Nombre:</label>
+					<input type="text" id="nombre" name="nombre" class="form-control" required>
+				</div>
+				<div class="mb-3">
+					<label for="apellido" class="form-label">Apellido:</label>
+					<input type="text" id="apellido" name="apellido" class="form-control" required>
+				</div>
+				<div class="mb-3">
+					<label for="edad" class="form-label">Edad:</label>
+					<input type="number" id="edad" name="edad" class="form-control" required>
+				</div>
+				<div class="mb-3">
+					<label for="telefono" class="form-label">Telefono:</label>
+					<input type="number" id="telefono" name="telefono" class="form-control" required>
+				</div>
+				<div class="mb-3">
+					<label for="pais" class="form-label">País:</label>
+					<input type="text" id="pais" name="pais" class="form-control" required> 
+				</div>
+				<button type="button" class="btn btn-success" id="btnAgregar">Agregar</button>
+				<button type="button" class="btn btn-danger" id="btnCerrar">Cancelar</button>
+			</form>
+		</dialog>
+
+		<dialog id="ventanaCambiarUsuario">
+			<form>
+				<div class="mb-3">
+					<label for="nombre" class="form-label">Nombre:</label>
+					<input type="text" id="cambionombre" name="nombre" class="form-control" required>
+				</div>
+				<div class="mb-3">
+					<label for="apellido" class="form-label">Apellido:</label>
+					<input type="text" id="cambioapellido" name="apellido" class="form-control" required>
+				</div>
+				<div class="mb-3">
+					<label for="edad" class="form-label">Edad:</label>
+					<input type="number" id="cambioedad" name="edad" class="form-control" required>
+				</div>
+				<div class="mb-3">
+					<label for="telefono" class="form-label">Telefono:</label>
+					<input type="number" id="cambiotelefono" name="telefono" class="form-control" required>
+				</div>
+				<div class="mb-3">
+					<label for="pais" class="form-label">País:</label>
+					<input type="text" id="cambiopais" name="pais" class="form-control" required> 
+				</div>
+				<button type="button" class="btn btn-success" id="btnCambiar">cambiar</button>
+				<button type="button" class="btn btn-danger" id="btnCerrarCambiar">Cancelar</button>
+			</form>
+		</dialog>
+	</div>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+	<script src="app.js"></script>
+</body>
+</html>
